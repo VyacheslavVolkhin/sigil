@@ -139,15 +139,20 @@ document.addEventListener("DOMContentLoaded", function () {
   const bodyElem = document.querySelector("body");
   function popupElementsClear() {
     document.body.classList.remove("menu-show");
-    //document.body.classList.remove("filter-show");
     document.body.classList.remove("search-show");
     popupElements.forEach((element) => element.classList.remove("popup-right"));
   }
   function popupElementsClose() {
     togglePopupButtons.forEach((element) => {
-      if (!element.closest(".no-close")) {
-        element.classList.remove("active");
-      }
+		if (window.innerWidth > 1023) {
+			if (!element.closest(".no-close")) {
+			  element.classList.remove("active");
+			}
+		} else {
+			if (!element.closest(".no-close") && !element.closest(".no-close-mobile")) {
+				element.classList.remove("active");
+			  }
+		}
     });
   }
   function popupElementsContentPositionClass() {
