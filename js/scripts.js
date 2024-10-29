@@ -1,5 +1,43 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+
+
+	   //range slider
+	   const slider = document.getElementById('range-slider');
+	   const minInput = document.getElementById('input-number-min');
+	   const maxInput = document.getElementById('input-number-max');
+	   
+	   const min = 0;
+	   const max = 6000;
+	   
+	   noUiSlider.create(slider, {
+		 start: [1200, 2400],
+		 connect: true,
+		 range: {
+		 'min': [min],
+		 'max': [max]
+		 }
+	   });
+	   
+	   slider.noUiSlider.on('update', (values, handle) => {
+		 const value = values[handle];
+	   
+		 if (handle === 0) {
+		 minInput.value = Math.round(value);
+		 } else {
+		 maxInput.value = Math.round(value);
+		 }
+	   });
+	   
+	   minInput.addEventListener('change', () => {
+		 slider.noUiSlider.set([minInput.value, null]);
+	   });
+	   
+	   maxInput.addEventListener('change', () => {
+		 slider.noUiSlider.set([null, maxInput.value]);
+	   });
+	
+	
 	//order sections
 	const orderBoxes = document.querySelectorAll('.order-box');
 

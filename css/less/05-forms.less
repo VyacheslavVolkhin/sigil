@@ -1,6 +1,114 @@
 /* ----------------------------------- *\
 			forms elements styles
 \* ----------------------------------- */
+.frm-field-range {
+	display: block;
+	position: relative;
+	font-size: 12px;
+	line-height: 1.2;
+	font-weight: 400;
+	color: #616161;
+	.noUi-target {
+		background: none;
+		border-radius: 0;
+		border: none;
+		box-shadow: none;
+		height: 15px;
+	}
+	.noUi-handle {
+		width: 15px;
+		height: 15px;
+		border-radius: 50%;
+		background: #fff;
+		box-shadow: 0px 0.5px 4px 0px rgba(0, 0, 0, 0.12), 0px 6px 13px 0px rgba(0, 0, 0, 0.12);
+		top: 0;
+		margin-left: -7px;;
+	}
+	.noUi-base {
+		height: 15px;
+		.noUi-connects {
+			height: 15px;
+			background: none;
+			border-radius: 0;
+			border: none;
+			&:before {
+				content: "";
+				display: block;
+				position: absolute;
+				top: 7px;left: 0;right: 0;
+				height: 1px;
+				background: #CABDB2;
+			}
+			.noUi-connect {
+				background: none;
+				border-radius: 0;
+				border: none;
+				&:before {
+					content: "";
+					display: block;
+					position: absolute;
+					top: 7px;left: 0;right: 0;
+					height: 1px;
+				}
+			}
+		}
+	}
+	.field-range-wrap {
+		display: flex;
+		margin: 0 -5px;
+		margin-top: 16px;
+	}
+	.field-range-labels {
+		display: flex;
+		justify-content: space-between;
+		margin: 0 -20px;
+	}
+	.field-range-label {
+		display: block;
+		width: 40px;
+		flex-shrink: 0;
+		text-align: center;
+		position: relative;
+		line-height: 14px;
+		padding-top: 2px;
+		font-size: 12px;
+		line-height: 16px;
+		&:before {
+			content: "";
+			display: none;
+			position: absolute;
+			bottom: 100%;left: 50%;
+			height: 15px;
+			width: 1px;
+			background: #CABDB2;
+			pointer-events: none;
+		}
+	}
+	.field-range {
+		padding: 0 5px;
+		width: 50%;
+		flex-shrink: 0;
+		.form-input {
+			height: 42px;
+			border-radius: 4px;
+			padding: 0 10px 0 12px;
+			font-size: 1em;
+			color: inherit;
+			&[placeholder]::-webkit-input-placeholder {color: #616161;}
+			&[placeholder]:-moz-placeholder {color: #616161;}
+			&[placeholder]::-moz-placeholder {color: #616161;}
+			&[placeholder]:-ms-input-placeholder {color: #616161;}
+		}
+	}
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+	input[type=number]{
+		-moz-appearance: textfield;
+	}
+}
 .frm-content-search {
 	display: block;
 	position: relative;
@@ -179,47 +287,7 @@
 	position: relative;
 	overflow: hidden;
 }
-.frm-field-range-slider {
-	overflow: visible;
-	.field-range-slider {
-		position: relative;
-		height: 1px;
-	}
-	input[type="range"] {
-		position: absolute;
-		top: 0;left: 0;right: 0;
-	}
-	input[type="range"] {
-		-webkit-appearance: none;
-		-moz-appearance: none;
-		appearance: none;
-		width: 100%;
-		height: 1px;
-		background: #CABDB2;
-		border-radius: 1px;
-		outline: none; 
-		overflow: visible;
-	  }
-	  
-	  input[type="range"]::slider-thumb,
-	  input[type="range"]::-webkit-slider-thumb {
-		-webkit-appearance: none; 
-		appearance: none;
-		z-index: 20;
-	  }
-	  input[type="range"]::slider-thumb, 
-	  input[type="range"]::-webkit-slider-thumb, 
-	  input[type="range"]::-moz-range-thumb {
-		width: 22px;
-		height: 22px;
-		background: #f00; 
-		box-shadow: 0px 0.5px 4px 0px rgba(0, 0, 0, 0.12), 0px 6px 13px 0px rgba(0, 0, 0, 0.12);
-		border-radius: 50%; 
-		cursor: pointer; 
-		margin-top: -11px;
-		z-index: 5;
-	  }
-}
+
 .frm-select-wrap {
 	position: relative;
 	.select-content-block {
@@ -465,6 +533,56 @@
 	}
 }
 @media (min-width: 768px) {
+	.frm-field-range {
+		.noUi-connects {
+			height: 23px;
+			&:before {
+				top: 0;
+			}
+			.noUi-connect {
+				&:before {
+					top: 0;
+				}
+			}
+		}
+		.noUi-target,
+		.noUi-handle,
+		.noUi-base {
+			height: 23px;
+		}
+		.noUi-handle {
+			width: 23px;
+			margin-left: -12px;
+			margin-top: -5px;
+		}
+		.field-range-label {
+			&:before {
+				display: block;
+			}
+			&:first-child {
+				&:before {
+					display: none;
+				}
+			}
+			&:last-child {
+				&:before {
+					display: none;
+				}
+			}
+		}
+		.field-range-wrap {
+			margin: 0 -10px;
+			margin-top: 16px;
+		}
+		.field-range {
+			padding: 0 10px;
+			.form-input {
+				height: 51px;
+				padding: 0 24px;
+				font-size: 16px;
+			}
+		}
+	}
 	.frm-select-main {
 		font-size: 16px;
 		.lbl-light {
