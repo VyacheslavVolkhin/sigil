@@ -2,6 +2,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+	// filter actions
+	const filterButtonOpen = document.querySelector('.js-filter-open');
+	const filterSection = document.querySelector('.filter-box');
+	if (filterSection) {
+		filterButtonOpen.addEventListener("click", function(event) {
+				document.body.classList.add("filter-show");
+				event.preventDefault();
+		})
+		filterSection.addEventListener("click", function (event) {
+			//filter close
+			if (event.target.matches(".js-filter-toggle")) {
+				document.body.classList.toggle("filter-show");
+				event.preventDefault();
+			} else if (event.target.matches(".js-filter-more")) {
+				event.target.closest('.filter-section-wrap').classList.toggle('show-all')
+				event.preventDefault();
+			} else if (event.target.matches(".js-filter-more-filters")) {
+				event.target.closest('.filter-box').classList.toggle('show-all-filters')
+				event.preventDefault();
+			}
+		});
+	}
+
+
+
 	   //range slider
 	   const slider = document.getElementById('range-slider');
 	   const minInput = document.getElementById('input-number-min');
@@ -10,32 +35,34 @@ document.addEventListener("DOMContentLoaded", function () {
 	   const min = 0;
 	   const max = 6000;
 	   
-	   noUiSlider.create(slider, {
-		 start: [1200, 2400],
-		 connect: true,
-		 range: {
-		 'min': [min],
-		 'max': [max]
-		 }
-	   });
-	   
-	   slider.noUiSlider.on('update', (values, handle) => {
-		 const value = values[handle];
-	   
-		 if (handle === 0) {
-		 minInput.value = Math.round(value);
-		 } else {
-		 maxInput.value = Math.round(value);
-		 }
-	   });
-	   
-	   minInput.addEventListener('change', () => {
-		 slider.noUiSlider.set([minInput.value, null]);
-	   });
-	   
-	   maxInput.addEventListener('change', () => {
-		 slider.noUiSlider.set([null, maxInput.value]);
-	   });
+	   if (slider) {
+		noUiSlider.create(slider, {
+			start: [1200, 2400],
+			connect: true,
+			range: {
+			'min': [min],
+			'max': [max]
+			}
+		  });
+		  
+		  slider.noUiSlider.on('update', (values, handle) => {
+			const value = values[handle];
+		  
+			if (handle === 0) {
+			minInput.value = Math.round(value);
+			} else {
+			maxInput.value = Math.round(value);
+			}
+		  });
+		  
+		  minInput.addEventListener('change', () => {
+			slider.noUiSlider.set([minInput.value, null]);
+		  });
+		  
+		  maxInput.addEventListener('change', () => {
+			slider.noUiSlider.set([null, maxInput.value]);
+		  });
+	   }
 	
 	
 	//order sections
@@ -112,7 +139,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const bodyElem = document.querySelector("body");
   function popupElementsClear() {
     document.body.classList.remove("menu-show");
-    document.body.classList.remove("filter-show");
+    //document.body.classList.remove("filter-show");
     document.body.classList.remove("search-show");
     popupElements.forEach((element) => element.classList.remove("popup-right"));
   }
