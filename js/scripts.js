@@ -1,5 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+	//mask phone 
+	let phoneInput = document.getElementById('phone');
+	if (phoneInput) {
+		VMasker(phoneInput).maskPattern("+9 (999) 999-99-99");
+	}
+	
 
 	//header catalog menu
 	const catalogMenuButtons = document.querySelectorAll('.popup-catalog-wrap .btn-catalog-menu');

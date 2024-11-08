@@ -519,7 +519,7 @@ html {
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
-  background: url(../img/main/bg.png) center top;
+  background: url(../img/main/bg.webp) center top;
   background-size: 1440px auto;
 }
 .wrap > .cnt-section {
@@ -527,10 +527,10 @@ html {
       flex-shrink: 0;
 }
 .wrap-light {
-  background-image: url(../img/main/bg-light.png);
+  background-image: url(../img/main/bg-light.webp);
 }
 .wrap-light .header {
-  background: #2C2219 url(../img/main/bg.png) center top;
+  background: #2C2219 url(../img/main/bg.webp) center top;
   background-size: 1440px auto;
 }
 .wrap-light:has(.article-top-box:first-child) .header {
@@ -3919,7 +3919,7 @@ html {
   width: 100dvw;
   min-width: var(--min);
   transform: translateX(-50%);
-  background: var(--clr-base-dark) url(../img/main/top.png) center no-repeat;
+  background: var(--clr-base-dark) url(../img/main/top.webp) center no-repeat;
   background-size: cover;
 }
 .article-top-box .info-inner-wrap {
@@ -4657,13 +4657,13 @@ html {
 }
 .content-bg-box {
   border-radius: 12px;
-  background: var(--clr-base) url(../img/main/bg-light.png) center top;
+  background: var(--clr-base) url(../img/main/bg-light.webp) center top;
   background-size: 1440px auto;
   padding: 20px;
   margin-bottom: var(--mbMain);
 }
 .content-bg-box:not(.bg-light) {
-  background: var(--clr-base) url(../img/main/bg.png) center top;
+  background: var(--clr-base) url(../img/main/bg.webp) center top;
   background-size: 1440px auto;
   color: #B4B0AA;
 }
@@ -4696,7 +4696,7 @@ html {
   width: 100dvw;
   min-width: var(--min);
   transform: translateX(-50%);
-  background: var(--clr-base-dark) url(../img/main/bg.png) center top;
+  background: var(--clr-base-dark) url(../img/main/bg.webp) center top;
   background-size: 465px auto;
 }
 .bg-light-box {
@@ -4717,7 +4717,7 @@ html {
   width: 100dvw;
   min-width: var(--min);
   transform: translateX(-50%);
-  background: var(--clr-base) url(../img/main/bg-light.png) center top;
+  background: var(--clr-base) url(../img/main/bg-light.webp) center top;
   background-size: 1440px auto;
 }
 .bg-light-box .title-box {
@@ -4764,7 +4764,7 @@ body.popup-open {
   width: 870px;
   max-width: 100%;
   max-height: 100%;
-  background: var(--clr-base-dark) url(../img/main/bg.png) center top;
+  background: var(--clr-base-dark) url(../img/main/bg.webp) center top;
   background-size: 465px auto;
   border-radius: 12px;
   z-index: 20;
@@ -6602,7 +6602,7 @@ body.popup-open {
     transform: translateX(-50%);
     width: 100dvw;
     min-width: var(--min);
-    background: var(--clr-base) url(../img/main/bg-light.png) center top;
+    background: var(--clr-base) url(../img/main/bg-light.webp) center top;
     background-size: 1440px auto;
   }
   .about-shop-box .info-inner-wrap {
@@ -6620,7 +6620,7 @@ body.popup-open {
     width: 50dvw;
     border-radius: 8px 0 0 8px;
     min-width: var(--min);
-    background: var(--clr-base-dark) url(../img/main/bg.png) center top;
+    background: var(--clr-base-dark) url(../img/main/bg.webp) center top;
     background-size: 465px auto;
   }
   .about-shop-box .photo-inner-wrap {
@@ -6738,7 +6738,7 @@ body.popup-open {
     width: 100dvw;
     min-width: var(--min);
     transform: translateX(-50%);
-    background: var(--clr-base) url(../img/main/bg-light.png) center top;
+    background: var(--clr-base) url(../img/main/bg-light.webp) center top;
     background-size: 1440px auto;
   }
   .about-menu-box .photo-inner-wrap {
@@ -6775,7 +6775,7 @@ body.popup-open {
     right: 0;
     width: 50dvw;
     min-width: var(--min);
-    background: var(--clr-base-dark) url(../img/main/bg.png) center top;
+    background: var(--clr-base-dark) url(../img/main/bg.webp) center top;
     background-size: 465px auto;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
@@ -7161,7 +7161,7 @@ select.form-input.form-input-clear {
   padding: 0 16px 0 0;
   color: inherit;
   font-weight: bold;
-  background-image: url(../img/icons/arrow-select.png);
+  background-image: url(../img/icons/arrow-select.webp);
   background-size: 8px auto;
   background-repeat: no-repeat;
   background-position: right center;
