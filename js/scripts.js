@@ -1,6 +1,38 @@
 document.addEventListener("DOMContentLoaded", function () {
 
 
+	//header catalog menu
+	const catalogMenuButtons = document.querySelectorAll('.popup-catalog-wrap .btn-catalog-menu');
+
+	catalogMenuButtons.forEach(button => {
+		button.addEventListener('click', function(event) {
+			event.preventDefault(); 
+			const menuListItem = this.closest('.menu li');
+			if (menuListItem.classList.contains('open')) {
+				return; 
+			}
+			document.querySelectorAll('.menu li').forEach(item => {
+				item.classList.remove('open');
+			});
+			menuListItem.classList.add('open');
+		});
+	});
+
+	const menuCatalogActiveButton = document.querySelector('.js-menu-catalog-active');
+	const menuCatalogCloseButton = document.querySelector('.js-menu-catalog-close');
+	if (menuCatalogActiveButton) {
+		menuCatalogActiveButton.addEventListener('click', function(e) {
+			document.body.classList.add('catalog-menu-show')
+			e.preventDefault();
+		});
+	}
+	if (menuCatalogCloseButton) {
+		menuCatalogCloseButton.addEventListener('click', function(e) {
+			document.body.classList.remove('catalog-menu-show')
+			e.preventDefault();
+		});
+	}
+
 
 	// filter actions
 	const filterButtonOpen = document.querySelector('.js-filter-open');
@@ -658,5 +690,4 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	});
 });
-
 
