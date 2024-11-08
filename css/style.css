@@ -8606,3 +8606,46 @@ input.form-clear-autofill::-webkit-contacts-auto-fill-button {
 /* ----------------------------------- *\
 			icons
 \* ----------------------------------- */
+/* ----------------------------------- *\
+			animation
+\* ----------------------------------- */
+.item-animation {
+  transition-property: transform, opacity;
+  transition-duration: 0.8s;
+  transition-timing-function: ease;
+  opacity: 0;
+}
+.item-animation.item-active {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+.item-aleft {
+  transform: translateX(-100px);
+}
+.item-aright {
+  transform: translateX(100px);
+}
+.item-abottom {
+  transform: translateY(-100px);
+}
+.item-atop {
+  transform: translateY(100px);
+}
+.item-animation-second {
+  transition-delay: 0.1s;
+}
+.item-animation-third {
+  transition-delay: 0.2s;
+}
+.item-animation-four {
+  transition-delay: 0.3s;
+}
+.item-animation-five {
+  transition-delay: 0.4s;
+}
+.item-animation-six {
+  transition-delay: 0.5s;
+}
+.item-animation-seven {
+  transition-delay: 0.6s;
+}

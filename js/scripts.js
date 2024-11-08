@@ -1,5 +1,30 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+	// items animate
+	function isElementInViewport(el) {
+		let rect = el.getBoundingClientRect();
+		return (rect.top <= window.innerHeight);
+	}
+	window.addEventListener('load', function() {
+		let items = document.querySelectorAll('.item-animation');
+		
+		items.forEach(function(item) {
+			if (isElementInViewport(item)) {
+				item.classList.add('item-active');
+			}
+		});
+	});
+	window.addEventListener('scroll', function() {
+		let items = document.querySelectorAll('.item-animation');
+		let windowHeight = window.innerHeight + window.pageYOffset;
+		
+		items.forEach(function(item) {
+			if (isElementInViewport(item) && item.offsetTop < windowHeight) {
+				item.classList.add('item-active');
+			}
+		});
+	});
+
 	//mask phone 
 	let phoneInput = document.getElementById('phone');
 	if (phoneInput) {
