@@ -202,9 +202,12 @@ html {
 	.actions-inner-wrap {
 		display: flex;
 		padding: 0 8px;
+		justify-content: space-around;
 	}
 	.action-wrap {
-		flex: 1;
+		width: auto;
+		padding: 0 5px;
+		flex-shrink: 0;
 	}
 	.btn-action {
 		display: block;
@@ -228,7 +231,7 @@ html {
 .footer {
 	overflow: hidden;
 	background: #1E1D1B;
-	font-size: 11px;
+	font-size: 12px;
 	line-height: 1.5;
 	color: rgba(223, 213, 196, 0.70);
 	p {
@@ -253,6 +256,9 @@ html {
 		color: #DFD5C4;
 		margin-bottom: 10px;
 	}
+	.text-small {
+		font-size: 11px;
+	}
 }
 .footer-main-panel {
 	.inner-wrap {
@@ -263,10 +269,10 @@ html {
 	}
 	.menu-inner-wrap {
 		color: rgba(180, 176, 170, 0.70);
-		font-size: 12px;
+		font-size: 16px;
 		font-weight: 500;
 		line-height: 1.35;
-		padding: 20px 0 20px 0;
+		padding: 17px 0 17px 0;
 		.menu {
 			li {
 				margin: 0;
@@ -274,7 +280,7 @@ html {
 		}
 		a {
 			display: block;
-			padding: 3px 0;
+			padding: 6px 0;
 		}
 	}
 	.contacts-inner-wrap {
@@ -287,7 +293,7 @@ html {
 		}
 	}
 	.soc-wrap {
-		margin-top: 6px;
+		margin-top: 15px;
 		display: flex;
 		flex-wrap: wrap;
 		.button-soc {
@@ -871,6 +877,7 @@ html {
 		}
 	}
 	.footer-bottom-panel {
+		font-size: 14px;
 		.inner-wrap {
 			padding-top: 30px;
 			padding-bottom: 30px;
@@ -885,6 +892,9 @@ html {
 				flex-shrink: 0;
 				padding: 0 60px 0 0;
 			}
+		}
+		.text-small {
+			font-size: 12px;
 		}
 	}
 }
@@ -971,21 +981,31 @@ html {
 		}
 	}
 	.footer {
-		font-size: 12px;
+		font-size: 18px;
 	}
 	.footer-main-panel {
+		.menu-inner-wrap {
+			font-size: 18px;
+		}
 		.inner-wrap {
-			padding-top: 7rem;
+			padding-top: 4.5rem;
 			padding-bottom: 30px;
 			flex-wrap: nowrap;
 		}
 		.logo-inner-wrap {
-			width: 30%;
+			width: 27%;
 			margin: 0;
-			padding: 0;
+			padding: 20px 3rem 0 0;
 			flex-shrink: 0;
 		}
+		.footer-title {
+			font-size: 20px;
+		}
+		.help-wrap {
+			font-size: 20px;
+		}
 		.logo {
+			max-width: 100%;
 			width: 240px;
 			display: block;
 			margin: 0;

@@ -688,10 +688,14 @@ html {
   display: -ms-flexbox;
   display: flex;
   padding: 0 8px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 .mobile-panel-box .action-wrap {
-  -ms-flex: 1;
-      flex: 1;
+  width: auto;
+  padding: 0 5px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 .mobile-panel-box .btn-action {
   display: block;
@@ -715,7 +719,7 @@ html {
 .footer {
   overflow: hidden;
   background: #1E1D1B;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.5;
   color: rgba(223, 213, 196, 0.7);
 }
@@ -741,23 +745,26 @@ html {
   color: #DFD5C4;
   margin-bottom: 10px;
 }
+.footer .text-small {
+  font-size: 11px;
+}
 .footer-main-panel .inner-wrap {
   padding-top: 28px;
   padding-bottom: 20px;
 }
 .footer-main-panel .menu-inner-wrap {
   color: rgba(180, 176, 170, 0.7);
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 1.35;
-  padding: 20px 0 20px 0;
+  padding: 17px 0 17px 0;
 }
 .footer-main-panel .menu-inner-wrap .menu li {
   margin: 0;
 }
 .footer-main-panel .menu-inner-wrap a {
   display: block;
-  padding: 3px 0;
+  padding: 6px 0;
 }
 .footer-main-panel .contacts-inner-wrap {
   font-size: 14px;
@@ -769,7 +776,7 @@ html {
   margin-bottom: 8px;
 }
 .footer-main-panel .soc-wrap {
-  margin-top: 6px;
+  margin-top: 15px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
@@ -1376,6 +1383,9 @@ html {
   .footer-main-panel .logo {
     width: 276px;
   }
+  .footer-bottom-panel {
+    font-size: 14px;
+  }
   .footer-bottom-panel .inner-wrap {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -1393,6 +1403,9 @@ html {
     -ms-flex-negative: 0;
         flex-shrink: 0;
     padding: 0 60px 0 0;
+  }
+  .footer-bottom-panel .text-small {
+    font-size: 12px;
   }
 }
 @media (min-width: 1024px) {
@@ -1475,22 +1488,32 @@ html {
     padding: 0 12px;
   }
   .footer {
-    font-size: 12px;
+    font-size: 18px;
+  }
+  .footer-main-panel .menu-inner-wrap {
+    font-size: 18px;
   }
   .footer-main-panel .inner-wrap {
-    padding-top: 7rem;
+    padding-top: 4.5rem;
     padding-bottom: 30px;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
   .footer-main-panel .logo-inner-wrap {
-    width: 30%;
+    width: 27%;
     margin: 0;
-    padding: 0;
+    padding: 20px 3rem 0 0;
     -ms-flex-negative: 0;
         flex-shrink: 0;
   }
+  .footer-main-panel .footer-title {
+    font-size: 20px;
+  }
+  .footer-main-panel .help-wrap {
+    font-size: 20px;
+  }
   .footer-main-panel .logo {
+    max-width: 100%;
     width: 240px;
     display: block;
     margin: 0;
