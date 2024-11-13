@@ -5082,6 +5082,11 @@ body.popup-open {
         flex: 1;
   }
 }
+@media (max-width: 639px) {
+  .tiles-menu-box .items-mobile-full .item-wrap {
+    width: 100%;
+  }
+}
 @media (max-width: 479px) {
   .pagenav-box:has(.page-sep) .btn-page:nth-child(2) ~ .btn-page {
     display: none;
