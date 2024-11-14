@@ -2088,6 +2088,13 @@ body.popup-open {
 			}
 		}
 	}
+	.popup-outer-box {
+		&.popup-mobile-full {
+			justify-content: flex-end;
+			padding: 20px 0 0 0;
+			flex-direction: column;
+		}
+	}
 }
 @media (max-width: 639px) {
 	.tiles-menu-box {
@@ -3095,6 +3102,17 @@ body.popup-open {
 				.btn {
 					font-size: 16px;
 				}
+			}
+		}
+	}
+	.popup-outer-box {
+		&.popup-address {
+			padding: 26px;
+			.popup-box {
+				padding: 80px 65px;
+			}
+			.frm-main {
+				max-width: 650px;
 			}
 		}
 	}
