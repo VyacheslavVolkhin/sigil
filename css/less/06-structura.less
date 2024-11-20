@@ -109,6 +109,15 @@ html {
 	z-index: 99;
 	border-bottom: 1px solid rgba(136, 134, 134, 0.20);
 }
+.header-main-panel {
+	.action-wrap {
+		[data-count] {
+			&:after {
+				top: 10px;
+			}
+		}
+	}
+}
 .header-top-panel {
 	.inner-wrap {
 		display: flex;
@@ -621,6 +630,7 @@ html {
 		.actions-inner-wrap, .search-inner-wrap {
 			display: none;
 		}
+		
 	}
 	.popup-menu-wrap {
 		.popup-content-block {

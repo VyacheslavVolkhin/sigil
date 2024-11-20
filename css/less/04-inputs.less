@@ -462,6 +462,27 @@ select.form-input:required:invalid {
         display: block;
     }
 }
+[data-count] {
+	&:after {
+		content: attr(data-count);
+		position: absolute;
+		top: 50%;left: 50%;
+		float:left;
+		height: 17px;
+		min-width: 17px;
+		border-radius: 9px;
+		background: #F5F5F5;
+		text-align: center;
+		line-height: 17px;
+		z-index: 3;
+		bottom: auto;
+		right: auto;
+		font-size: 10px;
+		letter-spacing: 0.2px;
+		font-weight: 400;
+		color: var(--clr-base-dark);
+	}
+}
 @media (max-width: 767px) {
 	.btn-action-select {
 		font-size: 12px;
